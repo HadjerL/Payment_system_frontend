@@ -4,6 +4,7 @@ import Paymentpage from './Paymentthing/Payingpage'
 import Paymentdonepage from "./Paymentthing/Paymentdonepage"
 import Paymentfailedpage from "./Paymentthing/Paymentfailedpage"
 import Feedbackpage from './Feedback/Feedpage'
+import Feedbacksent from "./Feedback/Feedback-sent"
 import { Routes, Route } from "react-router-dom"
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/payment-done" element = {<Paymentdonepage/>}></Route>
         <Route path="/payment-failed" element = {<Paymentfailedpage/>}></Route>
         <Route path="/feedback" element = {<Feedbackpage/>}></Route>
+        <Route path="/feedback-sent" element = {<Feedbacksent/>}></Route>
     </Routes>
   )
 }

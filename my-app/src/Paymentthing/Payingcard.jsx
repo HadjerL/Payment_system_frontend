@@ -1,9 +1,9 @@
 import {create_payement} from 'chargily-epay-react-js'
 import Inputcomp from '../common/Inputcomp'
 import Buttoncomp from '../common/Buttoncomp'
+import Cancelbutton from '../common/Cancelbutton'
 
 function App(props) {
-
     const handleClick = async()=>{
 
     const invoice = {
@@ -16,7 +16,7 @@ function App(props) {
         "discount" :0
     }
     try {
-        await create_payement(invoice)
+        await create_payement(invoice);
     } catch (error) {
       // handle your error here 
         console.log(error)
@@ -32,6 +32,7 @@ function App(props) {
                     return <Inputcomp label = {input.label} type = {input.type}></Inputcomp>
                 })}
                 <Buttoncomp call = 'Pay now' onClick={handleClick}>testing</Buttoncomp>
+                <Cancelbutton></Cancelbutton>
             </form>
         </div>
     );
